@@ -1,5 +1,3 @@
 cmake-build-*/
 build/
-.idea/workspace.xml
-.idea/tasks.xml
-.DS_Store
+.idea
