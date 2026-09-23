@@ -1,10 +1,10 @@
 #include <iostream>
 #include <limits>
-
 #include "array_ops.h"
 
 static void print_menu() {
-    std::cout << "\n--- Лабораторная 1, вариант 6 ---\n"
+    std::cout
+            << "\n--- Лабораторная 1, вариант 6 ---\n"
             << "1. Создать массив\n"
             << "2. Показать элемент по индексу\n"
             << "3. Вставить элемент\n"

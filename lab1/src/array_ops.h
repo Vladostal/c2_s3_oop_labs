@@ -17,4 +17,4 @@ bool array_binary_search(const int *arr, std::size_t size, int target, std::size
 
 void array_merge_sort(int *arr, std::size_t size);
 
-int array_median(int *arr, std::size_t size);
+int array_median(const int *arr, std::size_t size);

@@ -128,10 +128,16 @@ void array_merge_sort(int *arr, std::size_t size) {
     delete[] temp;
 }
 
-int array_median(int *arr, std::size_t size) {
+int array_median(const int *arr, std::size_t size) {
     if (arr == nullptr || size == 0) {
         return 0;
     }
-    array_merge_sort(arr, size);
-    return arr[size / 2];
+    int *sorted = new int[size];
+    for (std::size_t i = 0; i < size; ++i) {
+        sorted[i] = arr[i];
+    }
+    array_merge_sort(sorted, size);
+    int median = sorted[(size - 1) / 2];
+    delete[] sorted;
+    return median;
 }
