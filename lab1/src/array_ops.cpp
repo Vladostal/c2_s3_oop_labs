@@ -1,5 +1,4 @@
 #include "array_ops.h"
-#include <algorithm>
 #include <iostream>
 
 int *array_create(std::size_t size) {
@@ -13,12 +12,19 @@ void array_delete(int *&arr) {
     }
 }
 
+std::size_t minimum(std::size_t a, std::size_t b) {
+    if (a > b) {
+        return b;
+    }
+    return a;
+}
+
 int *array_resize(int *arr, std::size_t size, std::size_t new_size) {
     if (arr == nullptr && size != 0) {
         return nullptr;
     }
     int *new_arr = new int[new_size];
-    std::size_t copy_count = std::min(size, new_size);
+    std::size_t copy_count = minimum(size, new_size);
     for (std::size_t i = 0; i < copy_count; ++i) {
         new_arr[i] = arr[i];
     }
