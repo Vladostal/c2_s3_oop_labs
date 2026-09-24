@@ -7,7 +7,7 @@ void array_delete(int *&arr);
 
 std::size_t minimum(std::size_t a, std::size_t b);
 
-int *array_resize(const int *arr, std::size_t size, std::size_t new_size);
+int *array_resize(int *arr, std::size_t size, std::size_t new_size);
 
 int *array_insert(int *arr, std::size_t &size, std::size_t pos, int value);
 

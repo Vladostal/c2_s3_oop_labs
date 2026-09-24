@@ -1,4 +1,4 @@
-#include "array_ops.h"
+#include "array_ops.hpp"
 #include <iostream>
 
 int *array_create(std::size_t size) {

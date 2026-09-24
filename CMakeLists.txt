@@ -10,15 +10,12 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type" FORCE)
 endif()
 
-# AddressSanitizer + UBSan в Debug: ловят выход за границы, double delete[],
-# use-after-free. Включаются глобально, чтобы gtest собирался с теми же флагами.
 option(LABS_SANITIZE "Build Debug with AddressSanitizer and UBSan" ON)
 if(LABS_SANITIZE)
     add_compile_options($<$<CONFIG:Debug>:-fsanitize=address,undefined> $<$<CONFIG:Debug>:-fno-omit-frame-pointer>)
     add_link_options($<$<CONFIG:Debug>:-fsanitize=address,undefined>)
 endif()
 
-# Google Test
 if(CMAKE_VERSION VERSION_GREATER_EQUAL 3.24)
     cmake_policy(SET CMP0135 NEW)
 endif()

@@ -1,6 +1,6 @@
 #include <iostream>
 #include <limits>
-#include "array_ops.h"
+#include "array_ops.hpp"
 
 static void print_menu() {
     std::cout

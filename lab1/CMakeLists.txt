@@ -1,6 +1,3 @@
-# Лабораторная 1, вариант 6 (семейство A): сортировка слиянием + медиана
-
-# Чистые функции — отдельная библиотека, её используют и программа, и тесты
 add_library(lab1_core STATIC src/array_ops.cpp)
 target_include_directories(lab1_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 lab_warnings(lab1_core)
