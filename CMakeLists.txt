@@ -36,3 +36,4 @@ function(lab_warnings target)
 endfunction()
 
 add_subdirectory(lab1)
+add_subdirectory(lab2)

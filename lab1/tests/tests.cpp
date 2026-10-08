@@ -1,6 +1,6 @@
 #include <cstddef>
 #include <gtest/gtest.h>
-#include "../src/array_ops.hpp"
+#include "array_ops.hpp"
 
 TEST(ArrayCreateTest, CreateThenDeleteNullsPointer) {
     int *arr = array_create(3);

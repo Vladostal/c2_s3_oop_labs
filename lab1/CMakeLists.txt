@@ -6,7 +6,7 @@ add_executable(lab1 src/main.cpp)
 target_link_libraries(lab1 PRIVATE lab1_core)
 lab_warnings(lab1)
 
-add_executable(lab1_tests tests/test_variant.cpp)
+add_executable(lab1_tests tests/tests.cpp)
 target_link_libraries(lab1_tests PRIVATE lab1_core GTest::gtest_main)
 lab_warnings(lab1_tests)
 gtest_discover_tests(lab1_tests)
